@@ -1,11 +1,14 @@
+import logging
 import numpy as np
-import pandas as pd
+# import pandas as pd  # Not used, so remove it
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import joblib
-import logging
+
+# Configure logging before doing anything else
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Load the Iris dataset
 iris = load_iris()
@@ -26,7 +29,6 @@ accuracy = accuracy_score(y_test, y_pred)
 # Save the trained model
 joblib.dump(model, "iris_model.pkl")
 
-# logging: Configure & log important messages
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+# Log important messages
 logging.info(f"Model Accuracy: {accuracy:.2f}")
 logging.info("Model saved as iris_model.pkl")
