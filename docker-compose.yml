@@ -1,0 +1,24 @@
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION}
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload --reload-dir /app
+
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile.jupyter
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION}
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''

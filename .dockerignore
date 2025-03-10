@@ -1,0 +1,74 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+
+# Virtual environments (Updated)
+.venv
+env/
+venv/
+ENV/
+.conda
+*.envs  # Ignore any other environment files, but keep .env
+.env.local  # Ignore local overrides
+.env.*  # Ignore custom environment files (e.g., .env.dev, .env.test)
+
+# KEEP `.env` because it is used in `docker-compose.yml`
+# DO NOT ignore `.env`
+
+
+# Development and IDE files
+.git
+.gitignore
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Test and documentation
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+docs/_build/
+
+# Project-specific 
+tree.txt
+*.log
+.dockerignore  # Keep ignoring itself
+README.md
+
+# Build and distribution
+build/
+dist/
+*.manifest
+*.spec
+.eggs/
+wheels/
+
+# Jupyter Notebook 
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Local development files
+*.sqlite3
+instance/
+.webassets-cache
+
+# System files
+*Zone.Identifier
+*~
+.fuse_hidden*
+.Trash-*
+.nfs*

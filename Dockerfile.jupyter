@@ -1,0 +1,24 @@
+# Set the Python version for the base image.
+# The default is 3.10, but if a .env file is provided with PYTHON_VERSION, that value will override this default.
+ARG PYTHON_VERSION=3.10
+# Use the official Python image
+FROM python:${PYTHON_VERSION}
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install Jupyter Notebook & JupyterLab
+RUN pip install notebook jupyterlab
+
+# Copy the rest of the code
+COPY . .
+
+# Expose port for Jupyter Notebook
+EXPOSE 8888
+
+# Run Jupyter Notebook
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''"]

@@ -1,0 +1,14 @@
+numpy
+pandas
+notebook
+jupyterlab
+scikit-learn
+joblib
+fastapi
+uvicorn
+pydantic
+watchfiles
+
+
+
+
