@@ -1,4 +1,7 @@
-<img src="assets/logo.png" alt="ML API with FastAPI and Docker" width="80%">
+<div align="center">
+    <img src="assets/logo.png" alt="ML API with FastAPI and Docker" width="75%">
+</div>
+&nbsp;
 
 # ML API with FastAPI and Docker
 
