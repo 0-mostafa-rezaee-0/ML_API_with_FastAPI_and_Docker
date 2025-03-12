@@ -1,8 +1,5 @@
-# Set the Python version for the base image.
-# The default is 3.10, but if a .env file is provided with PYTHON_VERSION, that value will override this default.
-ARG PYTHON_VERSION=3.10
-# Use the official Python image
-FROM python:${PYTHON_VERSION}
+ARG PYTHON_VERSION
+FROM python:${PYTHON_VERSION}-slim
 
 # Set working directory
 WORKDIR /app

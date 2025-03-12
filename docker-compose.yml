@@ -1,10 +1,13 @@
+x-common-build-args: &build-args
+  PYTHON_VERSION: "3.10"
+
 services:
   fastapi:
     build:
       context: .
       dockerfile: Dockerfile.api
       args:
-        PYTHON_VERSION: ${PYTHON_VERSION}
+        <<: *build-args
     ports:
       - "8000:8000"
     volumes:
@@ -16,7 +19,7 @@ services:
       context: .
       dockerfile: Dockerfile.jupyter
       args:
-        PYTHON_VERSION: ${PYTHON_VERSION}
+        <<: *build-args
     ports:
       - "8888:8888"
     volumes:

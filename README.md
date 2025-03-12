@@ -13,8 +13,6 @@ This project demonstrates an end-to-end ML engineering workflow. You can train a
 
 ## Project Structure
 
-- **.env**  
-  Contains environment variables. Here, it sets the Python version used for building the images (e.g., `PYTHON_VERSION=3.10`).  
 - **Dockerfile.api**  
   Dockerfile for building the FastAPI container. It uses the PYTHON_VERSION from the .env file and installs only the dependencies required for serving the model.
 - **Dockerfile.jupyter**  

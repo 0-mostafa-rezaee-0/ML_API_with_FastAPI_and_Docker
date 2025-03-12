@@ -10,15 +10,12 @@ tree.txt
 # To prevent Zone.Identifier files
 *Zone.Identifier
 
-# Conda environments & virtual environments
+# Conda environments
 *.conda
-.venv/
-# Ignore local & custom environment files but keep `.env`
-*.envs  # Ignore custom environment directories
-.env.local  # Ignore local overrides
-.env.*  # Ignore environment files like `.env.dev`, `.env.test`
-# KEEP `.env` because it is used in `docker-compose.yml`
-# DO NOT ignore `.env`
+*.env
+*.envs
+.env/
+.envs/
 
 # Section 2--------------------------------------------------
 # Created by gitignore.io
@@ -207,6 +204,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+.env
 .venv
 env/
 venv/
