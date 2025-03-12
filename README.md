@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="assets/logo.png" alt="ML API with FastAPI and Docker" width="50%">
+    <img src="assets/logo.png" alt="ML API with FastAPI and Docker" width="60%">
 </div>
 &nbsp;
 
