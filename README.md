@@ -1,3 +1,9 @@
+# Iris Classification API
+
+A machine learning API for Iris flower classification using FastAPI and Docker.
+
+## Project Structure
+
 # p1-ml-engineering-api-fastapi-docker
  Project 1 | ML Engineering best practices  | ML model deployment as a FastAPI service, containerized with Docker for scalability and reproducibility.
 
@@ -28,7 +34,7 @@ This project demonstrates an end-to-end ML engineering workflow. You can train a
 - **app.py**  
   The FastAPI application that loads `iris_model.pkl` and exposes two endpoints:
   - `/health`: Returns a simple health check.
-  - `/predict`: Accepts a JSON payload with features and returns the model’s prediction.
+  - `/predict`: Accepts a JSON payload with features and returns the model's prediction.
 
 ---
 
@@ -65,7 +71,7 @@ This command builds the images for both FastAPI and Jupyter services and starts 
    python train.py
    ```
 
-   The script will train a logistic regression model on the Iris dataset, log the model’s accuracy, and save it as `iris_model.pkl` in the shared directory.
+   The script will train a logistic regression model on the Iris dataset, log the model's accuracy, and save it as `iris_model.pkl` in the shared directory.
 
 ### Step 3: Test the FastAPI Endpoints
 

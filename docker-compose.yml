@@ -1,23 +1,23 @@
+version: '3'
+
 x-common-build-args: &build-args
   PYTHON_VERSION: "3.10"
 
 services:
-  fastapi:
+  api:
     build:
       context: .
-      dockerfile: Dockerfile.api
-      args:
-        <<: *build-args
+      dockerfile: docker/Dockerfile.api
     ports:
       - "8000:8000"
     volumes:
       - .:/app
-    command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload --reload-dir /app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --log-level debug
 
   jupyter:
     build:
       context: .
-      dockerfile: Dockerfile.jupyter
+      dockerfile: docker/Dockerfile.jupyter
       args:
         <<: *build-args
     ports:
