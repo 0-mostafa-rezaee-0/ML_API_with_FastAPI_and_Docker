@@ -1,5 +1,3 @@
-version: '3'
-
 x-common-build-args: &build-args
   PYTHON_VERSION: "3.10"
 

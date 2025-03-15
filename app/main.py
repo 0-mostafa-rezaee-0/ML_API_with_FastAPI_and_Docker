@@ -12,7 +12,7 @@ app = FastAPI()
 
 # Define the model path
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-model_path = os.path.join(PROJECT_ROOT, 'models', 'iris_model.pkl')
+model_path = os.path.join(PROJECT_ROOT, 'models', 'ml_model.pkl')
 
 # Load the model
 try:
@@ -24,7 +24,7 @@ except Exception as e:
     logger.error(f"Error loading model: {str(e)}")
     raise
 
-class IrisInput(BaseModel):
+class ModelInput(BaseModel):
     sepal_length: float
     sepal_width: float
     petal_length: float
@@ -35,8 +35,13 @@ async def root():
     logger.debug("Root endpoint called")
     return {"status": "ok", "message": "API is working"}
 
+@app.get("/health")
+async def health():
+    logger.debug("Health check endpoint called")
+    return {"status": "ok"}
+
 @app.post("/predict")
-async def predict(data: IrisInput):
+async def predict(data: ModelInput):
     try:
         # Convert input data to list
         features = [[

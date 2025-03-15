@@ -31,9 +31,9 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 
 # Save the model using absolute path
-model_path = os.path.join(PROJECT_ROOT, 'models', 'iris_model.pkl')
+model_path = os.path.join(PROJECT_ROOT, 'models', 'ml_model.pkl')
 pickle.dump(model, open(model_path, 'wb'))
 
 # Log important messages
 logging.info(f"Model Accuracy: {accuracy:.2f}")
-logging.info("Model saved as iris_model.pkl")
+logging.info("Model saved as ml_model.pkl")
