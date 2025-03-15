@@ -4,6 +4,10 @@
 
 # ML API with FastAPI and Docker
 
+- $\textcolor{#FF4500}{\text{You can easily adapt the repository to work with any dataset of your choice.}}$
+- The structure is flexible and can be applied to various machine learning models, including $\textcolor{#1E90FF}{\text{regression, classification, and clustering}}$.   
+&nbsp;   
+
 ***Table of Contents***
 <details>
   <summary><a href="#1-about-this-repository"><i><b>1. About this Repository</b></i></a></summary>
@@ -55,8 +59,6 @@
 
 # 1. About this Repository
 This project demonstrates an end-to-end ML engineering workflow. You can train any machine learning model, serve it using a FastAPI application, and experiment interactively with Jupyter Notebook – all within Docker containers. The project is designed to be reproducible and maintainable.
-
-- <span style="color: #FF4500;">***You can easily adapt the repository to work with any dataset of your choice.***</span> The structure is flexible and can be applied to various machine learning models, including <span style="color: #1E90FF;">***regression, classification, and clustering***</span>.
 
 ## 1.1. Who Is This Project For?
 This project is designed for anyone interested in machine learning, API development, or containerization with Docker. Whether you're a student, developer, or data scientist, this resource will guide you through building and deploying a machine learning API using FastAPI and Docker.

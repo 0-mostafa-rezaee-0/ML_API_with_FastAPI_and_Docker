@@ -2,7 +2,8 @@
 
 This directory contains utility scripts and automation tools used in the project.
 
-- <span style="color: #FF4500;">***You can easily adapt the repository to work with any dataset of your choice.***</span> The structure is flexible and can be applied to various machine learning models, including <span style="color: #1E90FF;">***regression, classification, and clustering***</span>. 
+- $\textcolor{#FF4500}{\text{You can easily adapt the repository to work with any dataset of your choice.}}$  
+- The structure is flexible and can be applied to various machine learning models, including $\textcolor{#1E90FF}{\text{regression, classification, and clustering}}$. 
 
 ## Contents
 
