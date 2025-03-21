@@ -4,11 +4,18 @@
 
 # ML API with FastAPI and Docker
 
+- ML Engineering best practices  
+- ML model deployment as a FastAPI service, containerized with Docker for scalability and reproducibility
+
+---
+
 - $\textcolor{#FF4500}{\text{You can easily adapt the repository to work with any dataset of your choice.}}$
 - The structure is flexible and can be applied to various machine learning models, including $\textcolor{#1E90FF}{\text{regression, classification, and clustering}}$.   
-&nbsp;   
+
+---
 
 ***Table of Contents***
+
 <details>
   <summary><a href="#1-about-this-repository"><i><b>1. About this Repository</b></i></a></summary>
   <div>
