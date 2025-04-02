@@ -4,13 +4,13 @@
 
 # ML API with FastAPI and Docker
 
-- ML Engineering best practices  
+- ML Engineering best practices
 - ML model deployment as a FastAPI service, containerized with Docker for scalability and reproducibility
 
 ---
 
 - $\textcolor{#FF4500}{\text{You can easily adapt the repository to work with any dataset of your choice.}}$
-- The structure is flexible and can be applied to various machine learning models, including $\textcolor{#1E90FF}{\text{regression, classification, and clustering}}$.   
+- The structure is flexible and can be applied to various machine learning models, including $\textcolor{#1E90FF}{\text{regression, classification, and clustering}}$.
 
 ---
 
@@ -19,76 +19,73 @@
 <details>
   <summary><a href="#1-about-this-repository"><i><b>1. About this Repository</b></i></a></summary>
   <div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#11-who-is-this-project-for">1.1. Who Is This Project For?</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#12-what-will-you-learn">1.2. What Will You Learn?</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#13-prerequisites">1.3. Prerequisites</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#14-contents-of-this-repository">1.4. Contents of this Repository</a><br>
+              <a href="#11-who-is-this-project-for">1.1. Who Is This Project For?</a><br>
+              <a href="#12-what-will-you-learn">1.2. What Will You Learn?</a><br>
+              <a href="#13-prerequisites">1.3. Prerequisites</a><br>
+              <a href="#14-contents-of-this-repository">1.4. Contents of this Repository</a><br>
   </div>
 </details>
-&nbsp;
 
 <details>
   <summary><a href="#2-project-structure"><i><b>2. Project Structure</b></i></a></summary>
   <div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#21-production-environment-dockerization">2.1. Production Environment (Dockerization)</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#22-machine-learning-components">2.2. Machine Learning Components</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#23-testing-components">2.3. Testing Components</a><br>
+              <a href="#21-production-environment-dockerization">2.1. Production Environment (Dockerization)</a><br>
+              <a href="#22-machine-learning-components">2.2. Machine Learning Components</a><br>
+              <a href="#23-testing-components">2.3. Testing Components</a><br>
   </div>
 </details>
-&nbsp;
 
 <div>
-  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#3-project-files-and-folders-overview"><i><b>3. Project Files and Folders Overview</b></i></a>
+      <a href="#3-project-files-and-folders-overview"><i><b>3. Project Files and Folders Overview</b></i></a>
 </div>
-&nbsp;
 
 <details>
   <summary><a href="#4-how-to-use-and-test-the-project"><i><b>4. How to Use and Test the Project</b></i></a></summary>
   <div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#41-build-and-start-the-containers">4.1. Build and Start the Containers</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#42-train-the-model">4.2. Train the Model</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#43-run-the-tests">4.3. Run the Tests</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#44-test-the-fastapi-endpoints">4.4. Test the FastAPI Endpoints</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#45-use-jupyter-for-development">4.5. Use Jupyter for Development</a><br>
+              <a href="#41-build-and-start-the-containers">4.1. Build and Start the Containers</a><br>
+              <a href="#42-train-the-model">4.2. Train the Model</a><br>
+              <a href="#43-run-the-tests">4.3. Run the Tests</a><br>
+              <a href="#44-test-the-fastapi-endpoints">4.4. Test the FastAPI Endpoints</a><br>
+              <a href="#45-use-jupyter-for-development">4.5. Use Jupyter for Development</a><br>
   </div>
 </details>
-&nbsp;
 
 <div>
-  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#5-summary"><i><b>5. Summary</b></i></a>
+      <a href="#5-summary"><i><b>5. Summary</b></i></a>
 </div>
-&nbsp;
 
 <div>
-  &nbsp;&nbsp;&nbsp;&nbsp;<a href="#6-for-additional-questions"><i><b>6. For Additional Questions</b></i></a>
+      <a href="#6-for-additional-questions"><i><b>6. For Additional Questions</b></i></a>
 </div>
-&nbsp;
 
 # 1. About this Repository
+
 This project demonstrates an end-to-end ML engineering workflow. You can train any machine learning model, serve it using a FastAPI application, and experiment interactively with Jupyter Notebook – all within Docker containers. The project is designed to be reproducible and maintainable.
 
 ## 1.1. Who Is This Project For?
+
 This project is designed for anyone interested in machine learning, API development, or containerization with Docker. Whether you're a student, developer, or data scientist, this resource will guide you through building and deploying a machine learning API using FastAPI and Docker.
 
 ## 1.2. What Will You Learn?
+
 By the end of this project, you will:
 Develop a foundational understanding of FastAPI and its setup.
+
 - Learn the basics of containerizing applications using Docker.
 - Explore how to train and deploy simple machine learning models.
 - Work with practical examples to build scalable APIs.
 - Gain insights into integrating machine learning models into web services.
-This project serves as a well-organized example to help you learn about building ML APIs with FastAPI and Docker.
+  This project serves as a well-organized example to help you learn about building ML APIs with FastAPI and Docker.
 
 ## 1.3. Prerequisites
+
 This project is suitable for three types of learners:
 
 1. **For those familiar with Docker and FastAPI**: You can dive straight into the deployment phase. The examples and configurations provided will help you enhance your skills and explore best practices in building and deploying APIs.
-
 2. **For those who know Docker but are new to FastAPI**: This project will introduce you to FastAPI, guiding you through building and deploying a simple API. By the end, you'll be ready to integrate more complex models.
-
 3. **For beginners with no prior knowledge of Docker or FastAPI**: This project is designed with you in mind. You'll start with the basics, learning how to set up Docker and FastAPI, and then move on to building and deploying a machine learning model. The repository is well-organized and clear, allowing you to easily tweak it for your needs and learn effectively from practical examples.
 
-## 1.4. Contents of this Repository 
+## 1.4. Contents of this Repository
 
 ```
 Folder PATH listing
@@ -96,26 +93,33 @@ Folder PATH listing
 +---app                         <-- Contains the main application code
 |       main.py                 <-- Main application logic
 |       __init__.py             <-- Initializes the app module
+|       README.md               <-- Documentation for the app module
 |
 +---assets                      <-- Contains static assets (images, styles, etc.)
 |       logo.png                <-- Project logo image
+|       README.md               <-- Documentation for assets
 |
 +---data                        <-- Directory for storing datasets
 |       original_dataset.csv    <-- Example dataset for model training
+|       README.md               <-- Documentation for the dataset
 |
 +---docker                      <-- Contains Docker configuration files
 |       Dockerfile.api          <-- Dockerfile for building the API service
 |       Dockerfile.jupyter      <-- Dockerfile for setting up Jupyter Notebook
+|       README.md               <-- Documentation for Docker setup
 |
 +---models                      <-- Stores trained machine learning models
 |       ml_model.pkl            <-- Serialized ml model
+|       README.md               <-- Documentation for models
 |
 +---notebooks                   <-- Jupyter notebooks for experiments and analysis
 |       data_exploration.ipynb  <-- Notebook for data exploration
 |       train_dev.ipynb         <-- Notebook for training and development
+|       README.md               <-- Documentation for notebooks
 |
 +---scripts                     <-- Contains utility scripts
 |       train.py                <-- Script for training models
+|       README.md               <-- Documentation for scripts
 |
 +---tests                       <-- Contains automated tests
 |       __init__.py             <-- Initializes the tests package
@@ -134,40 +138,32 @@ Folder PATH listing
 
 ## 2.1. Production Environment (Dockerization)
 
-- **Dockerfile.api**  
-  Dockerfile for building the FastAPI container. It installs the dependencies required for serving the model in a production environment.
+- **Dockerfile.api**Dockerfile for building the FastAPI container. It installs the dependencies required for serving the model in a production environment.
+- **Dockerfile.jupyter**Dockerfile for building the Jupyter Notebook container. It installs additional dependencies for interactive development and experimentation.
+- **docker-compose.yml**Defines two services:
 
-- **Dockerfile.jupyter**  
-  Dockerfile for building the Jupyter Notebook container. It installs additional dependencies for interactive development and experimentation.
+  - `api`: Runs the FastAPI application for production, exposing it on port `8000`.
+  - `jupyter`: Runs a Jupyter Notebook server for development and model training, accessible on port `8888`.
 
-- **docker-compose.yml**  
-  Defines two services:
-  - `api`: Runs the FastAPI application for production, exposing it on port 8000.
-  - `jupyter`: Runs a Jupyter Notebook server for development and model training, accessible on port 8888.
-  
   Note: The project uses a volume mount `.:/app` where:
+
   - `app/` (Python): Your local project's Python application directory containing the FastAPI code
   - `/app` (Docker): The container mount point where your code is accessible inside Docker
-  
+
   This is a standard Docker practice where the Python application directory is mounted to a consistent location in the container.
 
 ## 2.2. Machine Learning Components
 
-- **requirements.txt**  
-  Lists all the Python dependencies, including NumPy, pandas, scikit-learn, FastAPI, and others.
+- **requirements.txt**Lists all the Python dependencies, including NumPy, pandas, scikit-learn, FastAPI, and others.
+- **train.py**A training script that loads a preprocessed dataset, which can be replaced with any dataset of your choice, trains the machine learning model, evaluates its performance, and saves the trained model as `ml_model.pkl`. The structure is designed to be adaptable for various machine learning tasks, including regression, classification, and clustering.
+- **app/main.py**The FastAPI application that loads `ml_model.pkl` and exposes two endpoints:
 
-- **train.py**  
-  A training script that loads a preprocessed dataset, which can be replaced with any dataset of your choice, trains a logistic regression model, evaluates its performance, and saves the trained model as `ml_model.pkl`. The structure is designed to be adaptable for various machine learning tasks, including regression, classification, and clustering.
-  
-- **app/main.py**  
-  The FastAPI application that loads `ml_model.pkl` and exposes two endpoints:
   - `/health`: Returns a simple health check.
   - `/predict`: Accepts a JSON payload with features and returns the model's prediction.
 
 ## 2.3. Testing Components
 
-- **tests/**  
-  Contains automated tests for the API endpoints:
+- **tests/**Contains automated tests for the API endpoints:
   - Unit tests for health check endpoint
   - Unit tests for prediction endpoint
   - Error handling tests
@@ -175,60 +171,50 @@ Folder PATH listing
 
 # 3. Project Files and Folders Overview
 
-- **app/**  
-  Contains the main application code:
+- **app/**Contains the main application code:
+
   - **main.py:** Main application logic for FastAPI.
   - **__init__.py:** Initializes the app module.
+  - **README.md:** Documentation for the app module.
+- **assets/**Contains static assets like images and styles:
 
-- **assets/**  
-  Contains static assets like images and styles.
+  - **logo.png:** Project logo image.
+  - **README.md:** Documentation for assets.
+- **data/**Directory for storing datasets used in the project:
 
-- **data/**  
-  Directory for storing datasets used in the project.
+  - **original_dataset.csv:** Example dataset for model training.
+  - **README.md:** Documentation for the dataset.
+- **docker/**Contains Docker configuration files:
 
-- **docker/**  
-  Contains Docker configuration files:
   - **Dockerfile.api:** Builds the FastAPI container.
   - **Dockerfile.jupyter:** Builds the Jupyter Notebook container.
+  - **README.md:** Documentation for Docker setup.
+- **models/**Stores trained machine learning models:
 
-- **models/**  
-  Stores trained machine learning models, such as `ml_model.pkl`.
+  - **ml_model.pkl:** Serialized machine learning model.
+  - **README.md:** Documentation for models.
+- **notebooks/**Jupyter notebooks for experiments and analysis:
 
-- **notebooks/**  
-  Jupyter notebooks for experiments and analysis:
   - **train_dev.ipynb:** Notebook for training and development.
   - **data_exploration.ipynb:** Notebook for data exploration.
+  - **ml_model.pkl:** Serialized model copy.
+  - **README.md:** Documentation for notebooks.
+- **scripts/**Contains utility scripts:
 
-- **scripts/**  
-  Contains utility scripts, such as:
   - **train.py:** Script for training machine learning models.
+  - **README.md:** Documentation for scripts.
+- **tests/**Contains automated tests and test documentation:
 
-- **.dockerignore:**  
-  Specifies files and directories to be ignored by Docker during the build process.
-
-- **.gitignore:**  
-  Specifies files and directories to be ignored by Git version control.
-
-- **LICENSE:**  
-  Contains the license information for the project.
-
-- **README.md:**  
-  Provides an overview of the project, including setup instructions and documentation.
-
-- **docker-compose.yml:**  
-  Defines services, port mappings, and volume mounting for the FastAPI and Jupyter containers.
-
-- **requirements.txt:**  
-  Lists all the Python dependencies required for both model training and serving.
-
-- **tree.txt:**  
-  A text representation of the directory structure.
-
-- **tests/**  
-  Contains automated tests and test documentation:
-  - **__init__.py:** Initializes the tests package
-  - **README.md:** Documentation for tests
-  - **test_api.py:** Tests for API endpoints including health checks, predictions, and error handling
+  - **__init__.py:** Initializes the tests package.
+  - **test_api.py:** Tests for API endpoints.
+  - **README.md:** Documentation for tests.
+- **.dockerignore:**Specifies files and directories to be ignored by Docker during the build process.
+- **.gitignore:**Specifies files and directories to be ignored by Git version control.
+- **LICENSE:**Contains the license information for the project.
+- **README.md:**Provides an overview of the project, including setup instructions and documentation.
+- **docker-compose.yml:**Defines services, port mappings, and volume mounting for the FastAPI and Jupyter containers.
+- **requirements.txt:**Lists all the Python dependencies required for both model training and serving.
+- **tree.txt:**A text representation of the directory structure.
 
 # 4. How to Use and Test the Project
 
@@ -244,12 +230,11 @@ This command builds the images for both FastAPI and Jupyter services and starts 
 
 ## 4.2. Train the Model
 
-1. Open a shell in the Jupyter container:
+1. To open a shell in the Jupyter container:
 
    ```bash
    docker-compose exec jupyter bash
    ```
-
 2. Inside the container, run the training script:
 
    ```bash
@@ -257,8 +242,9 @@ This command builds the images for both FastAPI and Jupyter services and starts 
    ```
 
    The script will:
-   - Load the Iris dataset
-   - Train a logistic regression model
+
+   - Load the dataset
+   - Train the machine learning model
    - Log the model's accuracy
    - Save the model as `models/ml_model.pkl`
 
@@ -271,6 +257,7 @@ docker-compose exec api pytest tests/
 ```
 
 The tests verify:
+
 - Health check endpoint
 - Root endpoint
 - Prediction endpoint with valid data
@@ -280,36 +267,38 @@ The tests verify:
 
 1. **API Documentation:**
    FastAPI provides interactive API documentation:
+
    - Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs)
    - ReDoc: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 
    These pages provide:
+
    - Interactive endpoint testing
    - Request/response schemas
    - Example values
    - Error responses
-
-2. **Health Check:**  
-   Open your browser and go to [http://localhost:8000/health](http://localhost:8000/health). You should see:
+2. **Health Check:**Open your browser and go to [http://localhost:8000/health](http://localhost:8000/health). You should see:
 
    ```json
    {"status": "ok"}
    ```
+3. **Prediction Endpoint:**Send a POST request to [http://localhost:8000/predict](http://localhost:8000/predict) with a JSON body. The model predicts Iris flower species based on the following measurements (in centimeters):
 
-2. **Prediction Endpoint:**  
-   Send a POST request to [http://localhost:8000/predict](http://localhost:8000/predict) with a JSON body. The model predicts Iris flower species based on the following measurements (in centimeters):
    - sepal_length: Length of the sepal
    - sepal_width: Width of the sepal
    - petal_length: Length of the petal
    - petal_width: Width of the petal
 
    The prediction returns a class number that corresponds to:
+
    - 0: Iris setosa
    - 1: Iris versicolor
    - 2: Iris virginica
 
    **Possible Responses:**
+
    - 200 OK: Successful prediction
+
    ```json
    {
        "status": "success",
@@ -317,7 +306,9 @@ The tests verify:
        "input_features": [5.1, 3.5, 1.4, 0.2]
    }
    ```
+
    - 422 Unprocessable Entity: Invalid input data
+
    ```json
    {
        "detail": [
@@ -329,7 +320,9 @@ The tests verify:
        ]
    }
    ```
+
    - 500 Internal Server Error: Server-side error (e.g., model loading failed)
+
    ```json
    {
        "status": "error",
@@ -340,6 +333,7 @@ The tests verify:
    Examples for each species:
 
    **Example 1 - Iris setosa:**
+
    ```bash
    curl -X POST "http://localhost:8000/predict" \
         -H "Content-Type: application/json" \
@@ -350,7 +344,9 @@ The tests verify:
             "petal_width": 0.2
         }'
    ```
+
    Response:
+
    ```json
    {
        "status": "success",
@@ -360,6 +356,7 @@ The tests verify:
    ```
 
    **Example 2 - Iris versicolor:**
+
    ```bash
    curl -X POST "http://localhost:8000/predict" \
         -H "Content-Type: application/json" \
@@ -370,7 +367,9 @@ The tests verify:
             "petal_width": 1.3
         }'
    ```
+
    Response:
+
    ```json
    {
        "status": "success",
@@ -380,6 +379,7 @@ The tests verify:
    ```
 
    **Example 3 - Iris virginica:**
+
    ```bash
    curl -X POST "http://localhost:8000/predict" \
         -H "Content-Type: application/json" \
@@ -390,7 +390,9 @@ The tests verify:
             "petal_width": 2.2
         }'
    ```
+
    Response:
+
    ```json
    {
        "status": "success",
@@ -410,39 +412,43 @@ You have two options to work with the Jupyter notebooks:
    - All required dependencies are already installed
    - Changes are automatically saved to your local files through Docker volumes
 
-2. **Through IDE (Recommended):**
-   - **For VS Code:**
-     1. Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)
-     2. Select "Dev Containers: Attach to Running Container..."
-     3. Choose the container named `p1-ml-engineering-api-fastapi-docker-jupyter-1`
-     4. When prompted to open a folder, navigate to `/app`
-     5. You can now work with notebooks directly in VS Code with all dependencies available
+2. **Through VS Code (Recommended):**
+   - Open VS Code and press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)
+   - Select "Dev Containers: Attach to Running Container..."
+   - Choose the container named `p1-ml-engineering-api-fastapi-docker-jupyter-1`
+   - A new VS Code window will open connected to the container
+   - In VS Code, click "Open Folder". Then, in the top box, you will see `/root`. Delete "root" to see "app". Finally, select the "app" folder to see all your project files
+   - In VS Code, ensure you have the following extensions installed: Docker, Dev Containers, Python, Jupyter
+   - You can now work with notebooks directly in VS Code with all dependencies available
+   - When opening a notebook, VS Code will prompt you to select a kernel. Choose the Python kernel that is specified in the Dockerfile. The libraries listed in requirements.txt and installed in the Docker container will be available automatically
 
-   - **For Cursor:**
-     1. Click the Remote Explorer icon in the sidebar (or press `Ctrl+Shift+P` and search for "Attach to Running Container")
-     2. Select the container named `p1-ml-engineering-api-fastapi-docker-jupyter-1`
-     3. When prompted to open a folder, navigate to `/app`
-     4. You can now work with notebooks directly in Cursor with all dependencies available
+3. **Running Python Scripts in VS Code Container:**
+   - Open any Python script in the VS Code editor
+   - In the VS Code terminal (which is already inside the container), run your script:
+     ```bash
+     python scripts/train.py
+     ```
+   - You should see the expected output from your script
 
 The provided notebooks are:
 - `notebooks/data_exploration.ipynb`: Explore the Iris dataset
 - `notebooks/train_dev.ipynb`: Develop and train the model
 
-Note: When working through the IDE, you're actually working inside the container where all dependencies are already installed. This ensures consistency between development and production environments.
+Note: When working through VS Code, you're actually working inside the container where all dependencies are already installed. This ensures consistency between development and production environments.
+
+4. **When You're Done:**
+   To stop and remove the containers, run:
+   ```bash
+   docker-compose down
+   ```
 
 # 5. Summary
 
-- **Development and Production Together:**  
-  Train your model in the Jupyter container, then serve predictions using FastAPI in a separate container. Both containers share the same code and model files via Docker volumes.
-
-- **Reproducibility:**  
-  Using Docker Compose ensures a consistent and easily configurable environment, allowing for seamless transitions between development and production.
-
-- **Testing:**  
+- **Development and Production Together:**Train your model in the Jupyter container, then serve predictions using FastAPI in a separate container. Both containers share the same code and model files via Docker volumes.
+- **Reproducibility:**Using Docker Compose ensures a consistent and easily configurable environment, allowing for seamless transitions between development and production.
+- **Testing:**
   Verify the application's functionality using the provided endpoints for health checks and predictions, ensuring reliability and performance.
 
 # 6. For Additional Questions
 
 If you have any questions or suggestions, feel free to reach out to [Mostafa Rezaee](https://www.linkedin.com/in/mostafa-rezaee/) at Linkedin. You can also open an issue on the project repository.
-
-
