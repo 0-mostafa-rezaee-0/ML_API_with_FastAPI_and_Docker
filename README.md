@@ -106,6 +106,7 @@ Folder PATH listing
 +---docker                      <-- Contains Docker configuration files
 |       Dockerfile.api          <-- Dockerfile for building the API service
 |       Dockerfile.jupyter      <-- Dockerfile for setting up Jupyter Notebook
+|       entrypoint.sh           <-- Shell script for automatic dependency installation
 |       README.md               <-- Documentation for Docker setup
 |
 +---models                      <-- Stores trained machine learning models
@@ -138,9 +139,10 @@ Folder PATH listing
 
 ## 2.1. Production Environment (Dockerization)
 
-- **Dockerfile.api**Dockerfile for building the FastAPI container. It installs the dependencies required for serving the model in a production environment.
-- **Dockerfile.jupyter**Dockerfile for building the Jupyter Notebook container. It installs additional dependencies for interactive development and experimentation.
-- **docker-compose.yml**Defines two services:
+- **Dockerfile.api**: Dockerfile for building the FastAPI container. It installs the dependencies required for serving the model in a production environment.
+- **Dockerfile.jupyter**: Dockerfile for building the Jupyter Notebook container. It installs additional dependencies for interactive development and experimentation.
+- **entrypoint.sh**: Shell script that automatically checks and installs any missing packages from requirements.txt when containers start.
+- **docker-compose.yml**: Defines two services:
 
   - `api`: Runs the FastAPI application for production, exposing it on port `8000`.
   - `jupyter`: Runs a Jupyter Notebook server for development and model training, accessible on port `8888`.
@@ -188,6 +190,7 @@ Folder PATH listing
 
   - **Dockerfile.api:** Builds the FastAPI container.
   - **Dockerfile.jupyter:** Builds the Jupyter Notebook container.
+  - **entrypoint.sh:** Automatically installs missing dependencies on container startup.
   - **README.md:** Documentation for Docker setup.
 - **models/**Stores trained machine learning models:
 
