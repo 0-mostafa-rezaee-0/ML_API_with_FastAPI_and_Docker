@@ -19,7 +19,13 @@ services:
       args:
         <<: *build-args
     ports:
-      - "8888:8888"
+      - "8888-8890:8888"
     volumes:
       - .:/app
     command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
