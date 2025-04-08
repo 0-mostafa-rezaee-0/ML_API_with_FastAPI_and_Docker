@@ -417,10 +417,9 @@ You have two options to work with the Jupyter notebooks:
    - A new VS Code window will open connected to the container
    - In VS Code, click "Open Folder". Then, in the top box, you will see `/root`. Delete `root` to see `app`. Finally, select the `app` folder to see all your project files
    - In VS Code, ensure you have the following extensions installed: `Docker`, `Dev Containers`, `Python`, `Jupyter`.
-   - You can now work with notebooks directly in VS Code with all dependencies available
-   - When opening a notebook, VS Code will prompt you to select a kernel. Choose the kernel named "Jupyter Container" which is automatically created in the container. Alternatively, you can select the Python kernel that shows `/usr/local/bin/python` path and Python version matching the one specified in your Dockerfile.
-   - To verify you've selected the correct kernel, run a test cell with `import sys; print(sys.executable)` - it should show a path within the container.
-   - If multiple kernels appear, always select the one with the container name or showing the container path (`/usr/local/bin/python`).
+   - You can now work with notebooks directly in VS Code with all dependencies available. When opening a notebook, VS Code will prompt you to select a kernel. Choose the kernel named `Jupyter Container` which is automatically created in the container.    
+   - If `Jupyter Container` does not appear automatically, click `Select Kernel` and choose `Jupyter Kernel`. The `Jupyter Container` option should then become available.
+   - Alternatively, you can select the Python kernel that shows the `/usr/local/bin/python` path and Python version matching the one specified in your Dockerfile. If multiple kernels appear, always select the one with the container name or showing the container path (`/usr/local/bin/python`).
 
 2. **Through Web Browser:**
    - Open your browser and navigate to [http://localhost:8888](http://localhost:8888)
